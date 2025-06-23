@@ -25,13 +25,13 @@ jobs:
           distribution: 'microsoft'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean install --file pract6_ServWeb/pom.xml
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}/pract6_ServWeb/target/*.war'
 
   deploy:
     runs-on: windows-latest
@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'videojuegoweb'
           slot-name: 'Production'
-          package: '*.war'
+          package: 'pract6_ServWeb/target/*.war'
           
