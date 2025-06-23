@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'videojuegoweb'
           slot-name: 'Production'
-          package: 'pract6_ServWeb/target/*.jar'
+          package: '*.jar'
           
