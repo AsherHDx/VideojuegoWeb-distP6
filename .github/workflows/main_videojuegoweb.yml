@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: '${{ github.workspace }}/pract6_ServWeb/target/*.war'
+          path: '${{ github.workspace }}/pract6_ServWeb/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -62,5 +62,5 @@ jobs:
         with:
           app-name: 'videojuegoweb'
           slot-name: 'Production'
-          package: 'pract6_ServWeb/target/*.war'
+          package: 'pract6_ServWeb/target/*.jar'
           
